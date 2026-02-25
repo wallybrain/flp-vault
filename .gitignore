@@ -1,7 +1,11 @@
-target/
-dist/
 node_modules/
+target/
+src-tauri/target/
 .env
 *.env
 .env.*
-src-tauri/target/
+*.db
+*.db-wal
+*.db-shm
+dist/
+.claude/get-shit-done

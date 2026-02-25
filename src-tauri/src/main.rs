@@ -1,0 +1,37 @@
+// Prevents additional console window on Windows in release, DO NOT REMOVE!!
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
+mod commands;
+mod parser;
+mod services;
+mod state;
+mod store;
+
+use state::AppState;
+use store::connection::init_db;
+use tauri::Manager;
+
+fn main() {
+    tauri::Builder::default()
+        .plugin(tauri_plugin_dialog::init())
+        .setup(|app| {
+            let app_data_dir = app
+                .path()
+                .app_data_dir()
+                .expect("Failed to resolve app data directory");
+
+            let db_mutex = init_db(&app_data_dir)
+                .expect("Failed to initialize database");
+
+            let db = db_mutex
+                .into_inner()
+                .expect("Failed to unwrap DB Mutex");
+
+            app.manage(AppState::new(db));
+
+            Ok(())
+        })
+        .invoke_handler(tauri::generate_handler![])
+        .run(tauri::generate_context!())
+        .expect("error while running tauri application");
+}

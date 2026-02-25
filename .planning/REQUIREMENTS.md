@@ -116,13 +116,51 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (Populated by roadmapper) | | |
+| PARS-01 | Phase 1 | Pending |
+| PARS-02 | Phase 1 | Pending |
+| PARS-03 | Phase 1 | Pending |
+| PARS-04 | Phase 1 | Pending |
+| PARS-05 | Phase 1 | Pending |
+| PARS-06 | Phase 1 | Pending |
+| SETT-01 | Phase 1 | Pending |
+| SETT-02 | Phase 1 | Pending |
+| SETT-03 | Phase 1 | Pending |
+| SETT-04 | Phase 1 | Pending |
+| DIST-01 | Phase 1 | Pending |
+| DIST-02 | Phase 1 | Pending |
+| GRUP-01 | Phase 2 | Pending |
+| GRUP-02 | Phase 2 | Pending |
+| GRUP-03 | Phase 2 | Pending |
+| GRUP-04 | Phase 2 | Pending |
+| GRUP-05 | Phase 2 | Pending |
+| GRUP-06 | Phase 2 | Pending |
+| GRUP-07 | Phase 2 | Pending |
+| GRUP-08 | Phase 2 | Pending |
+| GRUP-09 | Phase 2 | Pending |
+| FILE-01 | Phase 3 | Pending |
+| FILE-02 | Phase 3 | Pending |
+| FILE-03 | Phase 3 | Pending |
+| FILE-04 | Phase 3 | Pending |
+| BRWS-01 | Phase 3 | Pending |
+| BRWS-02 | Phase 3 | Pending |
+| BRWS-03 | Phase 3 | Pending |
+| BRWS-04 | Phase 3 | Pending |
+| BRWS-05 | Phase 3 | Pending |
+| BRWS-06 | Phase 3 | Pending |
+| BRWS-07 | Phase 3 | Pending |
+| BRWS-08 | Phase 3 | Pending |
+| BRWS-09 | Phase 3 | Pending |
+| BRWS-10 | Phase 3 | Pending |
+| DIFF-01 | Phase 4 | Pending |
+| DIFF-02 | Phase 4 | Pending |
+| DIFF-03 | Phase 4 | Pending |
+| DIFF-04 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 31 total
-- Mapped to phases: 0
-- Unmapped: 31
+- Mapped to phases: 31
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-25*
-*Last updated: 2026-02-25 after initial definition*
+*Last updated: 2026-02-25 — traceability populated by roadmapper*

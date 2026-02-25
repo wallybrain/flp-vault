@@ -14,7 +14,7 @@ Requirements for v0.1 release. Each maps to roadmap phases.
 - [ ] **PARS-03**: App parses .flp binary format to extract channel names and plugin IDs (generators vs effects)
 - [ ] **PARS-04**: App parses .flp binary format to extract pattern count and mixer track count
 - [ ] **PARS-05**: Parser skips unknown event IDs without error (forward-compatible with future FL Studio versions)
-- [ ] **PARS-06**: Parsed metadata is cached in SQLite keyed by file content hash with (mtime, size) shortcut
+- [x] **PARS-06**: Parsed metadata is cached in SQLite keyed by file content hash with (mtime, size) shortcut
 
 ### Grouping
 
@@ -60,7 +60,7 @@ Requirements for v0.1 release. Each maps to roadmap phases.
 - [ ] **SETT-01**: User can configure source folder path
 - [ ] **SETT-02**: User can configure organized folder path
 - [ ] **SETT-03**: User can configure originals folder path
-- [ ] **SETT-04**: Settings persist across app restarts
+- [x] **SETT-04**: Settings persist across app restarts
 
 ### Distribution
 
@@ -121,11 +121,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PARS-03 | Phase 1 | Pending |
 | PARS-04 | Phase 1 | Pending |
 | PARS-05 | Phase 1 | Pending |
-| PARS-06 | Phase 1 | Pending |
+| PARS-06 | Phase 1 | Complete |
 | SETT-01 | Phase 1 | Pending |
 | SETT-02 | Phase 1 | Pending |
 | SETT-03 | Phase 1 | Pending |
-| SETT-04 | Phase 1 | Pending |
+| SETT-04 | Phase 1 | Complete |
 | DIST-01 | Phase 1 | Complete (01-04) |
 | DIST-02 | Phase 1 | Complete (01-04) |
 | GRUP-01 | Phase 2 | Pending |

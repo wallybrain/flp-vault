@@ -1,3 +1,16 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: unknown
+last_updated: "2026-02-25T23:41:26.884Z"
+progress:
+  total_phases: 1
+  completed_phases: 0
+  total_plans: 4
+  completed_plans: 2
+---
+
 # Project State
 
 ## Project Reference
@@ -34,6 +47,7 @@ Progress: [██░░░░░░░░] 20%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01-foundation P01 | 8min | 2 tasks | 21 files |
 
 ## Accumulated Context
 
@@ -47,6 +61,9 @@ Recent decisions affecting current work:
 - [Pre-build]: Copy files, never move — move triggers delete+create in cloud sync
 - [Pre-build]: Cursor-based FLP parser not nom — simpler for sequential TLV event streams
 - [Pre-build]: .msi requires GitHub Actions windows-latest runner — cannot build from Linux
+- [01-01]: Icons must be RGBA PNG — Tauri generate_context! validates at compile time
+- [01-01]: dirs::document_dir() needs home_dir fallback — test environments may lack XDG config
+- [01-01]: use tauri::Manager explicit import required — trait methods not auto-imported
 - [01-04]: Draft releases from CI — CI creates drafts, user manually promotes to published
 - [01-04]: No code signing in Phase 1 — unsigned .msi acceptable for dev builds (SmartScreen warning expected)
 - [01-04]: GITHUB_TOKEN only for CI — no manually configured secrets needed for artifact upload
@@ -65,5 +82,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 01-04-PLAN.md — awaiting checkpoint:human-verify for CI pipeline verification
+Stopped at: Completed 01-01-PLAN.md — Tauri scaffold + SQLite store layer implemented, cargo check + tests pass
 Resume file: None

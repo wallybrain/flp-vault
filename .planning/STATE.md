@@ -8,7 +8,7 @@ progress:
   total_phases: 1
   completed_phases: 0
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 4 of 4 in current phase
-Status: In progress — Plan 04 complete, awaiting CI verification checkpoint
-Last activity: 2026-02-25 — Plan 04 complete (GitHub Actions CI pipeline created)
+Plan: 3 of 4 in current phase
+Status: In progress — Plan 02 complete, FLP binary parser implemented and tested
+Last activity: 2026-02-25 — Plan 02 complete (FLP binary parser: 15 unit tests, all pass)
 
-Progress: [██░░░░░░░░] 20%
+Progress: [███░░░░░░░] 30%
 
 ## Performance Metrics
 
@@ -48,6 +48,7 @@ Progress: [██░░░░░░░░] 20%
 
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 8min | 2 tasks | 21 files |
+| Phase 01-foundation P02 | 12min | 1 task | 3 files |
 
 ## Accumulated Context
 
@@ -64,6 +65,9 @@ Recent decisions affecting current work:
 - [01-01]: Icons must be RGBA PNG — Tauri generate_context! validates at compile time
 - [01-01]: dirs::document_dir() needs home_dir fallback — test environments may lack XDG config
 - [01-01]: use tauri::Manager explicit import required — trait methods not auto-imported
+- [01-02]: Flush channel accumulator at end-of-stream too, not only on FLP_NewChan — last channel would be lost otherwise
+- [01-02]: UTF-16 LE detected via alternating-null heuristic — many FL Studio versions omit BOM
+- [01-02]: Out-of-range BPM -> None + warning rather than Err — preserves all other metadata
 - [01-04]: Draft releases from CI — CI creates drafts, user manually promotes to published
 - [01-04]: No code signing in Phase 1 — unsigned .msi acceptable for dev builds (SmartScreen warning expected)
 - [01-04]: GITHUB_TOKEN only for CI — no manually configured secrets needed for artifact upload
@@ -82,5 +86,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 01-01-PLAN.md — Tauri scaffold + SQLite store layer implemented, cargo check + tests pass
+Stopped at: Completed 01-02-PLAN.md — FLP binary parser with 15 unit tests, all passing
 Resume file: None

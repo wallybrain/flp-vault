@@ -10,10 +10,10 @@ Requirements for v0.1 release. Each maps to roadmap phases.
 ### Parsing
 
 - [ ] **PARS-01**: App scans a user-configured source folder recursively to discover all .flp files
-- [ ] **PARS-02**: App parses .flp binary format to extract BPM and time signature
-- [ ] **PARS-03**: App parses .flp binary format to extract channel names and plugin IDs (generators vs effects)
-- [ ] **PARS-04**: App parses .flp binary format to extract pattern count and mixer track count
-- [ ] **PARS-05**: Parser skips unknown event IDs without error (forward-compatible with future FL Studio versions)
+- [x] **PARS-02**: App parses .flp binary format to extract BPM and time signature
+- [x] **PARS-03**: App parses .flp binary format to extract channel names and plugin IDs (generators vs effects)
+- [x] **PARS-04**: App parses .flp binary format to extract pattern count and mixer track count
+- [x] **PARS-05**: Parser skips unknown event IDs without error (forward-compatible with future FL Studio versions)
 - [x] **PARS-06**: Parsed metadata is cached in SQLite keyed by file content hash with (mtime, size) shortcut
 
 ### Grouping
@@ -117,10 +117,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | PARS-01 | Phase 1 | Pending |
-| PARS-02 | Phase 1 | Pending |
-| PARS-03 | Phase 1 | Pending |
-| PARS-04 | Phase 1 | Pending |
-| PARS-05 | Phase 1 | Pending |
+| PARS-02 | Phase 1 | Complete |
+| PARS-03 | Phase 1 | Complete |
+| PARS-04 | Phase 1 | Complete |
+| PARS-05 | Phase 1 | Complete |
 | PARS-06 | Phase 1 | Complete |
 | SETT-01 | Phase 1 | Pending |
 | SETT-02 | Phase 1 | Pending |

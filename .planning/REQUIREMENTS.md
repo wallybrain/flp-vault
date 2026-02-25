@@ -64,8 +64,8 @@ Requirements for v0.1 release. Each maps to roadmap phases.
 
 ### Distribution
 
-- [ ] **DIST-01**: App is distributed as a Windows installer (.msi or NSIS setup.exe)
-- [ ] **DIST-02**: Installer size is under 15 MB
+- [x] **DIST-01**: App is distributed as a Windows installer (.msi or NSIS setup.exe)
+- [x] **DIST-02**: Installer size is under 15 MB
 
 ## v2 Requirements
 
@@ -126,8 +126,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SETT-02 | Phase 1 | Pending |
 | SETT-03 | Phase 1 | Pending |
 | SETT-04 | Phase 1 | Pending |
-| DIST-01 | Phase 1 | Pending |
-| DIST-02 | Phase 1 | Pending |
+| DIST-01 | Phase 1 | Complete (01-04) |
+| DIST-02 | Phase 1 | Complete (01-04) |
 | GRUP-01 | Phase 2 | Pending |
 | GRUP-02 | Phase 2 | Pending |
 | GRUP-03 | Phase 2 | Pending |

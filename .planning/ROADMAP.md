@@ -35,7 +35,7 @@ Plans:
 - [ ] 01-01: Tauri project scaffold, Rust workspace, SQLite schema and migrations
 - [ ] 01-02: FLP binary parser (BPM, time sig, channels, plugins, pattern count, forward-unknown handling)
 - [ ] 01-03: Scan command, SQLite cache layer, settings persistence
-- [ ] 01-04: GitHub Actions Windows build pipeline and installer verification
+- [x] 01-04: GitHub Actions Windows build pipeline and installer verification
 
 ### Phase 2: Grouping
 **Goal**: Users can review and confirm fuzzy grouping proposals before any file is touched
@@ -95,7 +95,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/4 | Not started | - |
+| 1. Foundation | 1/4 | In progress | - |
 | 2. Grouping | 0/3 | Not started | - |
 | 3. Organize and Browse | 0/5 | Not started | - |
 | 4. Version Diff | 0/2 | Not started | - |

@@ -2,6 +2,8 @@
 
 import { getSettings, saveSettings, scanFolder } from '../api.js';
 
+const invoke = window.__TAURI__?.core?.invoke;
+
 let panelEl = null;
 let overlayEl = null;
 let currentSettings = { source_folder: '', organized_folder: '', originals_folder: '' };
@@ -48,12 +50,12 @@ function buildFolderRow(label, key, placeholder) {
     });
     browseBtn.addEventListener('click', async () => {
         try {
-            const { open } = await import('@tauri-apps/plugin-dialog');
-            const selected = await open({
+            const options = Object.freeze({
                 directory: true,
                 title: `Select ${label}`,
                 defaultPath: input.value || undefined,
             });
+            const selected = await invoke('plugin:dialog|open', { options });
             if (selected) {
                 input.value = selected;
                 currentSettings[key] = selected;

@@ -23,6 +23,22 @@ export function listScannedFiles() {
     return invoke('list_scanned_files');
 }
 
+export function proposeGroups() {
+    return invoke('propose_groups');
+}
+
+export function confirmGroups(groups) {
+    return invoke('confirm_groups', { groups });
+}
+
+export function listGroups() {
+    return invoke('list_groups');
+}
+
+export function resetGroups() {
+    return invoke('reset_groups');
+}
+
 export function onScanStarted(callback) {
     return listen('scan:started', callback);
 }

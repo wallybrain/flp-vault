@@ -1,17 +1,40 @@
-// Tauri invoke wrappers — implemented in Phase 03 alongside Rust commands
+// Tauri invoke wrappers — Plan 03 implementation
 
 const { invoke } = window.__TAURI__?.core ?? { invoke: async () => { throw new Error('Tauri not available') } };
+const { listen } = window.__TAURI__?.event ?? { listen: async () => { throw new Error('Tauri not available') } };
 
-export const api = {
-    // Scan commands (Phase 03)
-    startScan: () => invoke('start_scan'),
-    cancelScan: () => invoke('cancel_scan'),
-    getScanStatus: () => invoke('get_scan_status'),
+export function scanFolder(path) {
+    return invoke('scan_folder', { path });
+}
 
-    // Settings commands (Phase 03)
-    getSettings: () => invoke('get_settings'),
-    setSettings: (settings) => invoke('set_settings', { settings }),
+export function cancelScan() {
+    return invoke('cancel_scan');
+}
 
-    // File listing commands (Phase 03)
-    listFiles: () => invoke('list_files'),
-};
+export function getSettings() {
+    return invoke('get_settings');
+}
+
+export function saveSettings(settings) {
+    return invoke('save_settings', { settings });
+}
+
+export function listScannedFiles() {
+    return invoke('list_scanned_files');
+}
+
+export function onScanStarted(callback) {
+    return listen('scan:started', callback);
+}
+
+export function onScanProgress(callback) {
+    return listen('scan:progress', callback);
+}
+
+export function onScanComplete(callback) {
+    return listen('scan:complete', callback);
+}
+
+export function onScanCancelled(callback) {
+    return listen('scan:cancelled', callback);
+}

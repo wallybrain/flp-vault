@@ -17,12 +17,16 @@
         </div>
       </header>
 
-      <main class="main-content">
+      <main class="main-content" id="main-content">
         <div class="empty-state" id="empty-state">
+          <p class="empty-state-icon">&#128193;</p>
           <p class="empty-state-message">No .flp files found</p>
-          <button class="btn-primary" id="btn-open-settings">Open Settings to add a folder</button>
+          <p class="empty-state-hint">Configure a source folder to get started.</p>
+          <button class="btn-primary" id="btn-open-settings">Open Settings</button>
         </div>
       </main>
+
+      <div id="settings-container"></div>
 
       <div class="status-bar" id="status-bar">
         <span id="status-text">Ready</span>

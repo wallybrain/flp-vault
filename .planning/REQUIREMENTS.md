@@ -22,11 +22,11 @@ Requirements for v0.1 release. Each maps to roadmap phases.
 - [x] **GRUP-02**: BPM matching boosts grouping confidence when two files share the same BPM
 - [x] **GRUP-03**: Temporal clustering boosts grouping confidence for files saved within days of each other
 - [x] **GRUP-04**: App recognizes FL Studio "Save new version" naming pattern (Song Name 2.flp, Song Name 3.flp)
-- [ ] **GRUP-05**: User can merge two groups that are the same song
-- [ ] **GRUP-06**: User can split a group that incorrectly lumps two songs
-- [ ] **GRUP-07**: User can rename the canonical song name for a group
-- [ ] **GRUP-08**: User can manually assign ungrouped files to existing groups
-- [ ] **GRUP-09**: User can mark files as ignored (throwaway experiments)
+- [x] **GRUP-05**: User can merge two groups that are the same song
+- [x] **GRUP-06**: User can split a group that incorrectly lumps two songs
+- [x] **GRUP-07**: User can rename the canonical song name for a group
+- [x] **GRUP-08**: User can manually assign ungrouped files to existing groups
+- [x] **GRUP-09**: User can mark files as ignored (throwaway experiments)
 
 ### File Operations
 
@@ -132,11 +132,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | GRUP-02 | Phase 2 | Complete |
 | GRUP-03 | Phase 2 | Complete |
 | GRUP-04 | Phase 2 | Complete |
-| GRUP-05 | Phase 2 | Pending |
-| GRUP-06 | Phase 2 | Pending |
-| GRUP-07 | Phase 2 | Pending |
-| GRUP-08 | Phase 2 | Pending |
-| GRUP-09 | Phase 2 | Pending |
+| GRUP-05 | Phase 2 | Complete |
+| GRUP-06 | Phase 2 | Complete |
+| GRUP-07 | Phase 2 | Complete |
+| GRUP-08 | Phase 2 | Complete |
+| GRUP-09 | Phase 2 | Complete |
 | FILE-01 | Phase 3 | Pending |
 | FILE-02 | Phase 3 | Pending |
 | FILE-03 | Phase 3 | Pending |

@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-last_updated: "2026-02-26T02:54:00.000Z"
+last_updated: "2026-02-26T02:59:37.000Z"
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 7
-  completed_plans: 5
+  completed_plans: 6
 ---
 
 # Project State
@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 ## Current Position
 
 Phase: 2 of 4 (Grouping)
-Plan: 1 of 3 in current phase (02-01 complete)
-Status: In progress — Plan 02-01 complete, fuzzy matcher module built and tested
-Last activity: 2026-02-26 — Plan 02-01 complete (matcher module: normalize, signals, scorer, union-find, propose_groups; grouper service layer)
+Plan: 3 of 3 in current phase (02-01, 02-03 complete)
+Status: In progress — Plans 02-01 and 02-03 complete; persistence layer and IPC commands wired
+Last activity: 2026-02-26 — Plan 02-03 complete (song_groups + group_files tables, store/groups.rs CRUD, 4 Tauri IPC commands)
 
-Progress: [█████░░░░░] 50%
+Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
@@ -51,6 +51,7 @@ Progress: [█████░░░░░] 50%
 | Phase 01-foundation P02 | 12min | 1 task | 3 files |
 | Phase 01-foundation P03 | 5min | 2 tasks | 16 files |
 | Phase 02-grouping P01 | 4min | 2 tasks | 9 files |
+| Phase 02-grouping P03 | 3min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,9 @@ Recent decisions affecting current work:
 - [02-01]: Short names (< 4 chars) use exact match not trigram — prevents false positives on short stems
 - [02-01]: Group confidence = minimum edge confidence — conservative, forces review on weak matches
 - [02-01]: Canonical name = most frequent normalized stem, tiebreak by oldest mtime
+- [02-03]: unchecked_transaction() for confirm_groups — Mutex already held; transaction() borrows &mut self which conflicts
+- [02-03]: Separate GroupConfirmation (input) and ConfirmedGroup (output) types for group persistence IPC
+- [02-03]: ProposedGroup needs Serialize/Deserialize for Tauri IPC return; added via auto-fix
 
 ### Pending Todos
 
@@ -95,5 +99,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 02-01-PLAN.md — fuzzy matcher module (normalize, signals, scorer, union-find, propose_groups) + grouper service layer
+Stopped at: Completed 02-03-PLAN.md — SQLite persistence layer (song_groups, group_files tables, store/groups.rs CRUD) + 4 Tauri IPC commands (propose_groups, confirm_groups, list_groups, reset_groups)
 Resume file: None

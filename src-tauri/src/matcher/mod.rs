@@ -9,7 +9,7 @@ use scorer::compute_confidence;
 use union_find::UnionFind;
 use uuid::Uuid;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 pub struct ProposedGroup {
     pub id: String,
     pub canonical_name: String,

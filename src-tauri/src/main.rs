@@ -8,7 +8,10 @@ mod services;
 mod state;
 mod store;
 
-use commands::{cancel_scan, get_settings, list_scanned_files, save_settings, scan_folder};
+use commands::{
+    cancel_scan, confirm_groups, get_settings, list_groups, list_scanned_files, propose_groups,
+    reset_groups, save_settings, scan_folder,
+};
 use state::AppState;
 use store::connection::init_db;
 use tauri::Manager;
@@ -39,6 +42,10 @@ fn main() {
             get_settings,
             save_settings,
             list_scanned_files,
+            propose_groups,
+            confirm_groups,
+            list_groups,
+            reset_groups,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

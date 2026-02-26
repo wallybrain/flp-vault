@@ -9,7 +9,7 @@ Requirements for v0.1 release. Each maps to roadmap phases.
 
 ### Parsing
 
-- [ ] **PARS-01**: App scans a user-configured source folder recursively to discover all .flp files
+- [x] **PARS-01**: App scans a user-configured source folder recursively to discover all .flp files
 - [x] **PARS-02**: App parses .flp binary format to extract BPM and time signature
 - [x] **PARS-03**: App parses .flp binary format to extract channel names and plugin IDs (generators vs effects)
 - [x] **PARS-04**: App parses .flp binary format to extract pattern count and mixer track count
@@ -57,9 +57,9 @@ Requirements for v0.1 release. Each maps to roadmap phases.
 
 ### Settings
 
-- [ ] **SETT-01**: User can configure source folder path
-- [ ] **SETT-02**: User can configure organized folder path
-- [ ] **SETT-03**: User can configure originals folder path
+- [x] **SETT-01**: User can configure source folder path
+- [x] **SETT-02**: User can configure organized folder path
+- [x] **SETT-03**: User can configure originals folder path
 - [x] **SETT-04**: Settings persist across app restarts
 
 ### Distribution
@@ -116,15 +116,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PARS-01 | Phase 1 | Pending |
+| PARS-01 | Phase 1 | Complete |
 | PARS-02 | Phase 1 | Complete |
 | PARS-03 | Phase 1 | Complete |
 | PARS-04 | Phase 1 | Complete |
 | PARS-05 | Phase 1 | Complete |
 | PARS-06 | Phase 1 | Complete |
-| SETT-01 | Phase 1 | Pending |
-| SETT-02 | Phase 1 | Pending |
-| SETT-03 | Phase 1 | Pending |
+| SETT-01 | Phase 1 | Complete |
+| SETT-02 | Phase 1 | Complete |
+| SETT-03 | Phase 1 | Complete |
 | SETT-04 | Phase 1 | Complete |
 | DIST-01 | Phase 1 | Complete (01-04) |
 | DIST-02 | Phase 1 | Complete (01-04) |

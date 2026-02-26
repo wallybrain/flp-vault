@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 3 of 4 in current phase
-Status: In progress — Plan 02 complete, FLP binary parser implemented and tested
-Last activity: 2026-02-25 — Plan 02 complete (FLP binary parser: 15 unit tests, all pass)
+Plan: 4 of 4 in current phase
+Status: In progress — Plan 03 complete, Tauri commands and frontend scan/settings wired end-to-end
+Last activity: 2026-02-26 — Plan 03 complete (scan_folder, cancel_scan, get_settings, save_settings, list_scanned_files; scan table + settings panel)
 
-Progress: [███░░░░░░░] 30%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
@@ -49,6 +49,7 @@ Progress: [███░░░░░░░] 30%
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 8min | 2 tasks | 21 files |
 | Phase 01-foundation P02 | 12min | 1 task | 3 files |
+| Phase 01-foundation P03 | 5min | 2 tasks | 16 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,9 @@ Recent decisions affecting current work:
 - [01-02]: Flush channel accumulator at end-of-stream too, not only on FLP_NewChan — last channel would be lost otherwise
 - [01-02]: UTF-16 LE detected via alternating-null heuristic — many FL Studio versions omit BOM
 - [01-02]: Out-of-range BPM -> None + warning rather than Err — preserves all other metadata
+- [01-03]: ScanStatus.running uses Arc<Mutex<bool>> not bool — enables cancel_scan to signal scanner thread safely
+- [01-03]: Scanner spawned in std::thread not tokio — sync I/O, no async runtime needed
+- [01-03]: Frontend DOM built with makeEl()+textContent only, no innerHTML — safe even for Tauri IPC data
 - [01-04]: Draft releases from CI — CI creates drafts, user manually promotes to published
 - [01-04]: No code signing in Phase 1 — unsigned .msi acceptable for dev builds (SmartScreen warning expected)
 - [01-04]: GITHUB_TOKEN only for CI — no manually configured secrets needed for artifact upload
@@ -85,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-25
-Stopped at: Completed 01-02-PLAN.md — FLP binary parser with 15 unit tests, all passing
+Last session: 2026-02-26
+Stopped at: Completed 01-03-PLAN.md — Tauri commands, scanner service, scan table + settings panel frontend
 Resume file: None

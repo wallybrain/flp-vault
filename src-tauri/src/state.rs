@@ -4,7 +4,7 @@ use std::sync::{Arc, Mutex};
 pub struct ScanStatus {
     pub total: usize,
     pub done: usize,
-    pub running: bool,
+    pub running: Arc<Mutex<bool>>,
 }
 
 impl ScanStatus {
@@ -12,7 +12,7 @@ impl ScanStatus {
         Self {
             total: 0,
             done: 0,
-            running: false,
+            running: Arc::new(Mutex::new(false)),
         }
     }
 }

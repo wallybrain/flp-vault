@@ -1,7 +1,8 @@
 use rusqlite::Connection;
+use serde::{Deserialize, Serialize};
 use std::sync::Mutex;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Settings {
     pub source_folder: String,
     pub organized_folder: String,

@@ -1,2 +1,7 @@
-// Commands will be implemented in Phase 03
-// Each command module will be declared here as: pub mod <name>;
+pub mod browse;
+pub mod scan;
+pub mod settings;
+
+pub use browse::list_scanned_files;
+pub use scan::{cancel_scan, scan_folder};
+pub use settings::{get_settings, save_settings};

@@ -1,8 +1,9 @@
 use crate::parser::types::FlpMetadata;
 use rusqlite::Connection;
+use serde::Serialize;
 use std::sync::Mutex;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize)]
 pub struct FileRecord {
     pub hash: String,
     pub path: String,

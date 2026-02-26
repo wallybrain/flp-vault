@@ -1,5 +1,6 @@
 pub mod connection;
 pub mod files;
+pub mod groups;
 pub mod migrations;
 pub mod settings;
 

@@ -32,6 +32,24 @@ pub fn run_migrations(conn: &Connection) -> Result<()> {
             key   TEXT PRIMARY KEY,
             value TEXT NOT NULL
         );
+
+        CREATE TABLE IF NOT EXISTS song_groups (
+            group_id       TEXT PRIMARY KEY,
+            canonical_name TEXT NOT NULL,
+            confirmed_at   INTEGER NOT NULL,
+            is_ignored     INTEGER NOT NULL DEFAULT 0
+        );
+
+        CREATE TABLE IF NOT EXISTS group_files (
+            hash              TEXT NOT NULL,
+            group_id          TEXT NOT NULL,
+            is_ignored        INTEGER NOT NULL DEFAULT 0,
+            manually_assigned INTEGER NOT NULL DEFAULT 0,
+            assigned_at       INTEGER NOT NULL,
+            PRIMARY KEY (hash, group_id),
+            FOREIGN KEY (hash) REFERENCES files(hash),
+            FOREIGN KEY (group_id) REFERENCES song_groups(group_id)
+        );
         ",
     )?;
     Ok(())

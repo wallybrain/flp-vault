@@ -139,6 +139,10 @@ function buildPanel() {
             const result = await saveSettings(currentSettings);
             showWarnings(result.warnings);
             previousSourceFolder = currentSettings.source_folder;
+            if (currentSettings.source_folder) {
+                const rescanBtn = document.getElementById('btn-rescan');
+                if (rescanBtn) rescanBtn.style.display = '';
+            }
             if (currentSettings.source_folder && currentSettings.source_folder !== prevSource) {
                 hide();
                 if (onRescan) onRescan(currentSettings.source_folder);

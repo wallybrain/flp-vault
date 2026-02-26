@@ -14,6 +14,8 @@ dirs = "5"
 xxhash-rust = { version = "0.8", features = ["xxh3"] }
 chrono = { version = "0.4", features = ["serde"] }
 byteorder = "1"
+trigram = "0.4"
+uuid = { version = "1", features = ["v4"] }
 
 [dev-dependencies]
 tempfile = "3"

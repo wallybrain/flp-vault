@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-02-26T00:10:36.641Z"
+status: in_progress
+last_updated: "2026-02-26T02:54:00.000Z"
 progress:
-  total_phases: 1
+  total_phases: 4
   completed_phases: 1
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 7
+  completed_plans: 5
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** A producer can instantly find any version of any song and see what changed between versions — without opening FL Studio.
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Phase 2 — Grouping
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation)
-Plan: 4 of 4 in current phase
-Status: In progress — Plan 03 complete, Tauri commands and frontend scan/settings wired end-to-end
-Last activity: 2026-02-26 — Plan 03 complete (scan_folder, cancel_scan, get_settings, save_settings, list_scanned_files; scan table + settings panel)
+Phase: 2 of 4 (Grouping)
+Plan: 1 of 3 in current phase (02-01 complete)
+Status: In progress — Plan 02-01 complete, fuzzy matcher module built and tested
+Last activity: 2026-02-26 — Plan 02-01 complete (matcher module: normalize, signals, scorer, union-find, propose_groups; grouper service layer)
 
-Progress: [████░░░░░░] 40%
+Progress: [█████░░░░░] 50%
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Progress: [████░░░░░░] 40%
 | Phase 01-foundation P01 | 8min | 2 tasks | 21 files |
 | Phase 01-foundation P02 | 12min | 1 task | 3 files |
 | Phase 01-foundation P03 | 5min | 2 tasks | 16 files |
+| Phase 02-grouping P01 | 4min | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,10 @@ Recent decisions affecting current work:
 - [01-04]: Draft releases from CI — CI creates drafts, user manually promotes to published
 - [01-04]: No code signing in Phase 1 — unsigned .msi acceptable for dev builds (SmartScreen warning expected)
 - [01-04]: GITHUB_TOKEN only for CI — no manually configured secrets needed for artifact upload
+- [02-01]: trigram crate (not strsim) for pg_trgm-equivalent similarity — sufficient for the use case
+- [02-01]: Short names (< 4 chars) use exact match not trigram — prevents false positives on short stems
+- [02-01]: Group confidence = minimum edge confidence — conservative, forces review on weak matches
+- [02-01]: Canonical name = most frequent normalized stem, tiebreak by oldest mtime
 
 ### Pending Todos
 
@@ -90,5 +95,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 01-03-PLAN.md — Tauri commands, scanner service, scan table + settings panel frontend
+Stopped at: Completed 02-01-PLAN.md — fuzzy matcher module (normalize, signals, scorer, union-find, propose_groups) + grouper service layer
 Resume file: None

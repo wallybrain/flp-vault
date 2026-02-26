@@ -96,6 +96,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete   | 2026-02-26 |
-| 2. Grouping | 0/3 | Not started | - |
+| 2. Grouping | 1/3 | In Progress|  |
 | 3. Organize and Browse | 0/5 | Not started | - |
 | 4. Version Diff | 0/2 | Not started | - |

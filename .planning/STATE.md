@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in_progress
-last_updated: "2026-02-26T02:59:37.000Z"
+status: unknown
+last_updated: "2026-02-26T03:01:07.452Z"
 progress:
-  total_phases: 4
-  completed_phases: 1
+  total_phases: 2
+  completed_phases: 2
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
 ---
 
 # Project State
@@ -52,6 +52,7 @@ Progress: [██████░░░░] 60%
 | Phase 01-foundation P03 | 5min | 2 tasks | 16 files |
 | Phase 02-grouping P01 | 4min | 2 tasks | 9 files |
 | Phase 02-grouping P03 | 3min | 2 tasks | 8 files |
+| Phase 02-grouping P02 | 3 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -84,6 +85,9 @@ Recent decisions affecting current work:
 - [02-03]: unchecked_transaction() for confirm_groups — Mutex already held; transaction() borrows &mut self which conflicts
 - [02-03]: Separate GroupConfirmation (input) and ConfirmedGroup (output) types for group persistence IPC
 - [02-03]: ProposedGroup needs Serialize/Deserialize for Tauri IPC return; added via auto-fix
+- [Phase 02-02]: Custom events (review:cancel, review:confirmed) over callback props — cleaner decoupling from main.js
+- [Phase 02-02]: Split mode uses in-card checkbox UI (not modal) — less disruptive, stays in context
+- [Phase 02-02]: Close guard wrapped in try/catch — onCloseRequested unavailable in browser dev mode
 
 ### Pending Todos
 

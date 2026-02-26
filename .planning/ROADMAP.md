@@ -13,7 +13,7 @@ FLP Vault ships in four phases gated by dependency: the FLP binary parser is on 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - FLP parser, SQLite store, settings, and Windows build pipeline (completed 2026-02-26)
-- [ ] **Phase 2: Grouping** - Fuzzy matcher and manual review UI
+- [x] **Phase 2: Grouping** - Fuzzy matcher and manual review UI (completed 2026-02-26)
 - [ ] **Phase 3: Organize and Browse** - File operations and three-panel browse UI
 - [ ] **Phase 4: Version Diff** - Two-version comparison with BPM and plugin delta
 
@@ -96,6 +96,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete   | 2026-02-26 |
-| 2. Grouping | 2/3 | In Progress|  |
+| 2. Grouping | 3/3 | Complete   | 2026-02-26 |
 | 3. Organize and Browse | 0/5 | Not started | - |
 | 4. Version Diff | 0/2 | Not started | - |
